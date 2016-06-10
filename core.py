@@ -1,8 +1,24 @@
 import random
+import mongoengine
 
+
+# TODO : get max_question // suppress hard-coded variable
 max_question = 10
+
 sick_range = list()
 question_range = dict()
+
+
+# init the connection to the mondoDB database
+def init_database():
+    from mongoengine import connect
+    connect(
+        name="test",
+        host='192.168.1.35',
+        port='12345',
+        username='user',
+        password='pwd123')
+    # connect('project1', host='mongodb://localhost/database_name')
 
 
 # set sick_range from nb_zone
@@ -57,7 +73,7 @@ def select_question():
 
 # remove all question from question set if is_rm == True
 # or only the asked question if is_rm == False
-#TODO : error on q07
+# TODO: error on q07
 def update_question_range(is_rm, removed, question_set):
     if question_range[removed] > 1:
         question_range[removed] -= 1
