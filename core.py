@@ -57,6 +57,7 @@ def select_question():
 
 # remove all question from question set if is_rm == True
 # or only the asked question if is_rm == False
+#TODO : error on q07
 def update_question_range(is_rm, removed, question_set):
     if question_range[removed] > 1:
         question_range[removed] -= 1
