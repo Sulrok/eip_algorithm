@@ -1,0 +1,10 @@
+##the following is the data structure and prototype for project data##
+
+maladies.txt
+zone; id; nom; id_questions
+
+zone.txt
+zone_id;name;q_liste
+
+question.txt
+id_question;"question"
